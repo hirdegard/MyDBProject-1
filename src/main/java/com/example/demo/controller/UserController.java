@@ -73,4 +73,7 @@ public class UserController {
 		userMapper.delete(id);
 		return "deletedView";//"User deleted successfully";
 	}
+	
+	//mapperのほうでメールアドレスでユーザーを検索する機能等を実装予定なので、それに合わせてコントローラもつくる
+	
 }
