@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.UserMapper">
+	<!--i番目のユーザのデータ-->
+<select id="findById" resultType="com.example.demo.domain.User">
+	SELECT * FROM user WHERE id = #{id}
+</select>
+
+	<!--全てのデータの取得-->
+	<select  id="findAll" resultType="com.example.demo.domain.User">
+		Select * From user
+	</select>
+	
+	<delete id="removeAll" >
+		Delete From user
+	</delete>
+	
+	<!--ユーザーの追加-->
+	<insert id="insert" parameterType="com.example.demo.domain.User">
+		Insert Into User (name, email, age) Values (#{name}, #{email}, #{age})
+	</insert>
+	
+	<!--ユーザーの更新-->
+	<update id="update" parameterType="com.example.demo.domain.User">
+		Update user Set name=#{name}, email=#{email}, age=#{age} where id=#{id}
+	</update>
+	
+	<!--ユーザーの削除-->
+	<delete id="delete" parameterType="int">
+		Delete from user Where id=#{id}
+	</delete>
+</mapper>
