@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>データの更新</h1>
+<form action="/users" method="post">
+	<!--隠しフィールドでPUTメソッドを指定-->
+	<input type="hidden" name="_method" value="PUT"/>
+	<label for="name">name : </label>
+	<input type="text" id="name" name="name"/>
+	
+	<label for="email">email : </label>
+	<input type="email" id="email" name="email"/>
+	
+	<label for="age">age : </label>
+	<input type="number" id="age" name="age" />
+	
+	<label for="id">id : </label>
+	<input type="number" id="id" name="id"/>
+	
+	<input type="submit" value="送信"/>
+</form>
+</body>
+</html>

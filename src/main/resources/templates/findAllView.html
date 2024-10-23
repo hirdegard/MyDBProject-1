@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="/users/add">ユーザーの追加</a>
+<p th:each="user : ${users}">
+	[[${user.id}]] : [[${user.name}]] : [[${user.email}]] : [[${user.age}]]
+</p>
+
+</body>
+</html>
